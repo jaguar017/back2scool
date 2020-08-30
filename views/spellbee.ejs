@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spell Bee</title>
     <link rel="stylesheet" href="/css/spell bee.css">
+    <link rel="stylesheet" href="/css/foot.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap" rel="stylesheet">
 </head>
@@ -20,9 +21,9 @@
                     <img src="B2S_Logo.png" class="b2s-logo" />
                   </a>
                 </li>
-                <li><a href="/login">Login</a></li>
+                <li><a href="/index">Login</a></li>
                 <li><a href="/about">About Us</a></li>
-                <li><a onclick="scroll_contact()" type="button">Contact Us</a> </li>
+                <li><a href="/about" type="button">Contact Us</a> </li>
                 <li>
                   <a href="/gravitas">
                     <img src="graVITas20 Logo.png" class="gra-logo" />
@@ -46,16 +47,16 @@
             <div class="menu hidden" id="menu">
               <ul class="menu-links" id="menu-links">
                 <hr style="margin: -10px 0 0 0;">
-                <li><a href="/spellbee">Spell-Bee</a> </li><hr>
-                <li><a href="/mathbee">Math-Bee</a> </li><hr>
+                <!-- <li><a href="/spellbee">Spell-Bee</a> </li><hr> -->
+                <li><a href="/index">Login</a> </li><hr>
                 <li><a href="/about">About Us</a></li><hr>
-                <li><a onclick="scroll_contact()" type="button">Contact Us</a> </li><hr></ul>
+                <li><a href="/about">Contact Us</a> </li><hr></ul>
             </div>
           </div>
         </div>
       </nav>
 <h1>SPELL-BEE</h1>
- <div class="container">
+ <div class="contain">
    <form action="/quiz" method="POST">
      <div class="c c1">
          <p>CATEGORY 1</p>
@@ -72,14 +73,31 @@
     <div class="c c3">
         <p>CATEGORY 3</p>
         <button type="submit" class="btn btn3">CLASS 9-10</button>
-    
+
   </div>
   </form>
-    
-    
+  <!-- <footer class="footer">
+    <div class="container">
+        <div class="row">
 
-
-
+            <div class="col-12 col-sm-6 footer-joinus">
+                <span class="footer-joinus-text">Have something to post or suggest?</span>
+                <a class="footer-joinus_button" href="">Mail us</a>
+            </div>
+            <div class="col-12 col-sm-6 align-self-center ">
+                <div class="text-center">
+                    <a class="btn btn-social-icon btn-google" href="https://www.instagram.com/back2schoolvit/"><i class="fa fa-instagram fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+       </div>
+       <div class="row justify-content-center" style="margin-top: 10px;">
+            <div class="col-auto">
+                <p>© Copyright 2020 Back 2 School</p>
+            </div>
+       </div>
+    </div>
+</footer> -->
     <script>
         var burger = document.getElementById("burger");
 var menu = document.getElementById("menu");
@@ -88,7 +106,7 @@ var mobileAdgLogo = document.getElementById("mobile-adg-logo");
 burger.addEventListener("click", () => {
   $("#menu").slideToggle("medium");
   menu.classList.toggle("hidden");
- 
+
   burger.classList.toggle('toggle');
 });
 var contact=document.getElementById("contact");

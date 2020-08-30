@@ -7,68 +7,44 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/newnav.css">
     <title>Back To School</title>
     <link rel="stylesheet" type="text/css" href="css/gravitas.css">
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+  <a class="navbar-brand" href="/"><img class="backs" src="B2S_Logo.png"></a>
 
-  <nav>
-  <div class="navbar">
-    <div class="laptop">
-        <ul class="nav-links">
-          <li>
-            <a href="/"> <img  src="B2S_Logo.png" class="b2s-logo" /></a>
-               
-            </li>
-            &emsp;&emsp;&emsp;&emsp;
-          <li><a href="/login">Login</a> </li>
-            <li><a href="/about">About Us</a></li>
-            <li><a class="contactUS" onclick="scroll_contact()" type="button">Contact Us </a> </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <li>
-              <a href="http://gravitas.ac.in">
-               <img src="graVITas20 Logo.png" class="gra-logo" />
-              </a> 
-            </li>
-        </ul>
-      </div>
-      <div class="mobile">
-        <div class="mobile-nav">
-          <div id="mobile-gra-logo">
-              <img src="graVITas20 Logo.png" class="gra-logo" />
-            
-          </div>
-          <div class="burger" id="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-       </div>
-        <div class="menu hidden" id="menu">
-          <ul class="menu-links" id="menu-links">
-            <hr style="margin: -10px 0 0 0;">
-            <li><a href="/login">Login</a> </li><hr>
-            <li><a href="/about">About Us</a></li><hr>
-            <li><a class="contactUS" onclick="scroll_contact()" type="button">Contact Us</a> </li><hr>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- <div> -->
-    <!-- <%- include('navbar'); -%> -->
-<!-- </div>  -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <!-- <li class="nav-item active">
+      <a class="nav-link" href="/login" id="mathbee" style="color:white">MathBee<span class="sr-only">(current)</span></a>
+    </li> -->
+       <li class="nav-item active">
+      <a class="nav-link" href="/index" style="color:white">Login<span class="sr-only login">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="/about" style="color:white">AboutUs<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" onclick="scroll_contact()" type="button" style="color:white">ContactUs<span class="sr-only">(current)</span></a>
+    </li>
+      <a class="navbar-brand" href="/gravitas"><img class="gravi" src="graVITas20 Logo.png"></a>
+</ul>
+</div>
+</div>
+</nav>
   <div class="carousel">
     <%- include('carousel'); -%>
 </div>
 <div class="container">
 	<h1 id="head"><img class="img-fluid" src="B2S_Logo.png" alt="" style="width: 10rem;"></h1>
-	<p id="brief" class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p id="brief" class="lead" style="color:white;">BACK-2-SCHOOL is a fully integrated open platform for students from classes 3 to 12,  to show their IQ and explore their skills. The competition uses a combination of children's natural desire to compete and participate effectively to hone their skills in competitions like MATH BEE and SPELL BEE. The event goes on for two days and aims at nurturing mathematical and vocabulary skills among children in a challenging environment. It encourages children to participate, on equal basis, solely with the aim of familiarizing  them with the contest to achieve extraordinary levels of speed and accuracy with their skills.
+All the participants will be recognized with certificates and the top 3 students from each category will be rewarded with cash prizes. The best school gets honoration with a trophy.</p>
 </div>
 <br>
 <br>
@@ -77,24 +53,24 @@
    <div class="col-md-6 col-12 mb-md-0 mb-4 ">
      <div class="yes">
        <h3 class="pass">SPELL BEE</h3>
-        <h4 class="seven">CLASS 3-12</h4> 
-        <form action="/index"  method="POST">   
-      <button type="submit" id="btn_spellbee" class="btn btn-outline-dark but">Click Here!</button>
-       </form> 
+        <h4 class="seven">CLASS 3-12</h4>
+        <form action="/spell_des"  method="POST">
+      <button type="submit" id="btn_spellbee" style="color:white;" class="btn btn-outline-dark but">Click Here!</button>
+       </form>
   </div>
    </div>
       <div class="col-md-6 col-12">
      <div class="yes">
        <h3 class="pass">MATH BEE</h3>
       <h4 class="seven">CLASS 7-12</h4>
-      <form action="/index" method="POST">
-      <button type="submit" id="btn_mathbee"  class="btn btn-outline-dark but">Click Here!</button>
+      <form action="/mathbee_des" method="POST">
+      <button type="submit" id="btn_mathbee" style="color:white;" class="btn btn-outline-dark but">Click Here!</button>
       </form>
 
     </div>
      </div>
    </div>
- </div> 
+ </div>
 
 </div>
 <div id="contact">

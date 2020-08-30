@@ -9,8 +9,7 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Baloo Bhaina 2', cursive;
-    
-
+    overflow-x: hidden;
 }
 
 h1{
@@ -22,7 +21,7 @@ h1{
     color: rgb(250, 226, 91);
     text-shadow: 4px 4px black;
 }
-.container{
+.contain{
     position: absolute;
     width: 50%;
     bottom: 25%;
@@ -127,7 +126,7 @@ h1{
     background: rgb(41, 73, 109);
     
   }
-  .container{
+  .contain{
     position: relative;
     width: 50%;
     margin-top: 40px;

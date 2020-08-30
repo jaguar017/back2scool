@@ -1,3 +1,4 @@
+
 var quiz = [
     {
         question: "What does HTML stand for?",
@@ -97,31 +98,52 @@ let questions = quiz.sort(function(){
 });
 
 let totalQuestion = questions.length;
-$(function () {
- 
-  let totalTime = 300; // 300 seconds for the timer
-  let minute = 0;
-  let second = 0;
-  let counter=0;
-  let timer = setInterval(function () {
-
-    counter++
-    minute = Math.floor((totalTime - counter) / 60); // calculating minutes
-    second = totalTime - minute * 60 - counter;
-
-  
-    $(".timerBox span").text(minute + ":" + second);
-    if (counter==totalTime) {
-      alert("Time's Up. Press OK to get your Result");
+// $(function () {
+//  
+  // let totalTime = 300; // 300 seconds for the timer
+  // let minute = 0;
+  // let second = 0;
+  // let counter=0;
+  // sessionStorage.setItem("time",counter)
+  // let timer = setInterval(function () {
+// 
+    // counter++
+// 
+    // counter=sessionStorage.getItem("time")
+    // minute = Math.floor((totalTime - counter) / 60); // calculating minutes
+    // second = totalTime - minute * 60 - counter;
+// 
+  // 
+    // $(".timerBox span").text(minute + ":" + second);
+    // if (counter==totalTime) {
+      // alert("Time's Up. Press OK to get your Result");
+      // result();
+      // sessionStorage.clear();
+      // clearInterval(timer);
+    // }
+  // }, 1000) // timer set for 1 second interval
+  var interval = 300;
+setInterval(function()
+{
+    var remaining = sessionStorage.endTime - new Date;
+    if( remaining >= 0 )
+    {
+      minute = Math.floor((interval/ 60000)); // calculating minutes
+      second = Math.floor((remaining - minute * 60000)/1000);
+      $('.timerBox span').text( minute + ":" + second);
+    } else
+    {
+      sessionStorage.clear();
+      alert("time is up ")
       result();
-      localStorage.clear();
-      clearInterval(timer);
+      console.log(remaining) 
+      console.log(sessionStorage.endTime)
+      clearInterval();
     }
-  }, 1000) // timer set for 1 second interval
-
+}, 100);
   // Questions
   printQuestion(index);
- });
+// });
  
 
 // Function for Printing Questions
